@@ -1,7 +1,28 @@
 aid: bba
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bba.png
 name: BBA
-description: BBA is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: 'BBA is a name-only entry harvested from the Andreessen Horowitz public
+  investment list (https://a16z.com/investment-list/), where it appears alphabetically
+  between Bayesian Health and Beacons.ai. As of the 2026-07-20 enrichment pass the
+  entry could not be resolved to an operating company: a16z publishes no link, description,
+  or category for it, the name does not appear in the a16z portfolio detail pages,
+  and web searches surface no startup, funding round, or press coverage matching it.
+  Candidate domains (bba.com, bba.ai, bba.co, getbba.com) either fail to resolve or
+  are parked for sale, so there is no website, developer portal, documentation, or
+  API surface to profile. This profile is retained as an unresolved venture-portfolio
+  lead rather than an API provider; it should be re-checked if a16z ever attaches a
+  link to the entry or the company emerges publicly under this name.'
 url: https://raw.githubusercontent.com/api-evangelist/bba/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +30,33 @@ x-backed-by:
 - a16z
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-resolution: unresolved
+x-resolution-notes: 'Name-only a16z investment-list entry; no website, domain, or API
+  surface found on 2026-07-20.'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Venture Backed
+- a16z Portfolio
+- Portfolio Lead
+- Unresolved
+- Stub
 apis: []
+common:
+- name: a16z Investment List
+  description: The Andreessen Horowitz public investment list that the BBA entry was
+    harvested from.
+  url: https://a16z.com/investment-list/
+  type: InvestorPortfolio
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
